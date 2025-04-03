@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* @import "./index.css"; <-- Tailwind автоматически объединит другие файлы CSS */
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+button {
+  cursor: pointer;
+}
+
+@layer components {
+  .card {
+    @apply text-custom-color bg-linear-90 from-custom-primary to-custom-color p-20 text-2xl rounded-2xl font-bold ring-3 font-sigmar;
+  }
+}
+
+@theme {
+  --color-custom-color: #b0514c;
+  --color-custom-primary: #3651c9;
+  --font-sigmar: "Sigmar One", cursive;
+  --animate-vibration: vibration 1s ease-in-out infinite;
+
+  @keyframes vibration {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility flex-start {
+  @apply flex items-start justify-start;
+}
+
+@utility flex-end {
+  @apply flex items-end justify-end;
+}
