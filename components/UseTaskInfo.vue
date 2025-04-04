@@ -1,6 +1,8 @@
 <template>
   <div
+
     class="flex sm:flex-row flex-col gap-3 sm:justify-between bg-black py-4 items-center mt-4 sm:mt-6"
+
   >
     <div
       v-if="tasks && !tasks.length"
