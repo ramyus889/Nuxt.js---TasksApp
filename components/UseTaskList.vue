@@ -11,7 +11,7 @@ const emits = defineEmits<{
 <template>
   <div class="overflow-y-scroll scrollbar h-[300px] sm:h-[470px]">
     <TransitionGroup name="list" tag="div">
-      <div v-for="task in props.tasks" :key="task.id" class="mt-5 scroll-auto">
+      <div v-for="task in props.tasks" :key="task.id" class="mb-5 scroll-auto">
         <div
           class="bg-[#2f30448a] shadow p-5 rounded-2xl flex gap-3 justify-between"
         >
