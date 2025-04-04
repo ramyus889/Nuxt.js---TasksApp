@@ -61,7 +61,7 @@ function setFilter(value: TaskFilter) {
     </div>
     <UseFormSubmit @add-task="addTask" />
     <div
-      class="flex sm:flex-row flex-col gap-3 sm:justify-between items-center mt-10"
+      class="flex sm:flex-row flex-col gap-3 sm:justify-between items-center mt-7 sm:mt-10"
     >
       <div
         v-if="!tasks.length"
