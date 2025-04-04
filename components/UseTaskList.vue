@@ -9,7 +9,7 @@ const emits = defineEmits<{
 }>();
 </script>
 <template>
-  <div class="overflow-y-scroll scrollbar h-[470px]">
+  <div class="overflow-y-scroll scrollbar h-[320px] sm:h-[470px]">
     <TransitionGroup name="list" tag="div">
       <div v-for="task in props.tasks" :key="task.id" class="mt-5 scroll-auto">
         <div
@@ -50,5 +50,6 @@ const emits = defineEmits<{
 
 .scrollbar::-webkit-scrollbar {
   width: 0px;
+  scroll-behavior: smooth;
 }
 </style>
