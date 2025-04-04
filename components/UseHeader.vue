@@ -10,5 +10,5 @@
 <script setup lang="ts">
 const image = "/img/Code/frontend.jpg";
 
-defineProps(["message"]);
+const message = ref("Tasks App Branch");
 </script>
