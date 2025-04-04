@@ -10,5 +10,7 @@
 <script setup lang="ts">
 const image = "/img/Code/frontend.jpg";
 
+
 const message = ref("Tasks App Main");
+
 </script>
