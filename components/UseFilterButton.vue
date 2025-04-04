@@ -7,7 +7,7 @@ const emits = defineEmits<{ setFilter: [filter: TaskFilter] }>();
 <template>
   <button
     @click="emits('setFilter', props.filter)"
-    class="flex items-center justify-center gap-2 border-2 px-5 py-1 max-sm:w-full rounded-xl"
+    class="flex items-center justify-center gap-2 border-2 px-5 py-1.5 max-sm:w-full rounded-xl"
   >
     {{ props.filter }}
   </button>
