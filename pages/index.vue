@@ -1,21 +1,3 @@
-<template>
-  <div class="max-w-[800px] mx-auto">
-    <UseHeader :message="message" />
-    <UseFormSubmit @add-task="addTask" />
-    <UseTaskInfo
-      :tasks="tasks"
-      :total-done="totalDone"
-      :filter="filter"
-      @set-filter="setFilter"
-    />
-    <UseTaskList
-      :tasks="filteredTasks"
-      @toggle-done="toggleDone"
-      @remove-task="removeTask"
-    />
-  </div>
-</template>
-
 <script setup lang="ts">
 import type { Task, TaskFilter } from "../types";
 
@@ -81,3 +63,20 @@ watch(
   { deep: true }
 );
 </script>
+<template>
+  <div class="max-w-[800px] mx-auto">
+    <UseHeader :message="message" />
+    <UseFormSubmit @add-task="addTask" />
+    <UseTaskInfo
+      :tasks="tasks"
+      :total-done="totalDone"
+      :filter="filter"
+      @set-filter="setFilter"
+    />
+    <UseTaskList
+      :tasks="filteredTasks"
+      @toggle-done="toggleDone"
+      @remove-task="removeTask"
+    />
+  </div>
+</template>
