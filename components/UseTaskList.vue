@@ -15,7 +15,7 @@ const emits = defineEmits<{
         <div
           class="bg-[#2f30448a] shadow p-5 rounded-2xl flex gap-3 justify-between"
         >
-          <label class="flex items-center cursor-pointer gap-3">
+          <label class="flex items-center cursor-pointer gap-3 asdss">
             <input
               type="checkbox"
               @input="emits('toggleDone', task.id)"
