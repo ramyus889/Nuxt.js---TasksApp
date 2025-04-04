@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, watch } from "vue";
 import type { Task, TaskFilter } from "../types";
 
 const message = ref("Tasks App Main");
@@ -45,6 +46,23 @@ function removeTask(id: string) {
 function setFilter(value: TaskFilter) {
   filter.value = value;
 }
+
+// Загрузка задач из localStorage при монтировании
+onMounted(() => {
+  const savedTasks = localStorage.getItem("tasks");
+  if (savedTasks) {
+    tasks.value = JSON.parse(savedTasks);
+  }
+});
+
+// Сохранение задач в localStorage при изменении списка задач
+watch(
+  tasks,
+  (newTasks) => {
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
+  },
+  { deep: true }
+);
 </script>
 
 <template>
