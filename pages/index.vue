@@ -69,7 +69,7 @@ function setFilter(value: TaskFilter) {
       >
         Add a Task to get started
       </div>
-      <div v-else class="sm:text-3xl text-2xl sm:text-start text-center">
+      <div v-else class="sm:text-3xl text-xl sm:text-start text-center">
         {{ totalDone }} / {{ tasks.length }} tasks completed
       </div>
       <div v-if="tasks.length" class="flex gap-3 max-sm:w-full">
