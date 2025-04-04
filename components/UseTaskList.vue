@@ -9,7 +9,7 @@ const emits = defineEmits<{
 }>();
 </script>
 <template>
-  <div class="overflow-y-scroll scrollbar h-[300px] sm:h-[470px]">
+  <div class="overflow-y-scroll scrollbar h-[281px] sm:h-[470px]">
     <TransitionGroup name="list" tag="div">
       <div v-for="task in props.tasks" :key="task.id" class="mb-5 scroll-auto">
         <div
